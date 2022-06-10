@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/RegisterLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F0A654"
+        android:fontFamily="sans-serif"
+        android:onClick="onRegister"
+        android:text="Регистрация"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="216dp"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="Регистрация"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/switch3"
+        app:layout_constraintStart_toEndOf="@+id/switch3"
+        app:layout_constraintTop_toTopOf="@+id/switch3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="Авторизация"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/switch3"
+        app:layout_constraintEnd_toStartOf="@+id/switch3"
+        app:layout_constraintTop_toTopOf="@+id/switch3" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:onClick="onSwitch"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="  "
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:theme="@style/MyCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/RegisterLogin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RegisterID"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/RegisterLogin"
+        app:layout_constraintStart_toStartOf="@+id/RegisterLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="ID пользователя"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RegisterLogin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="Логин"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RegisterPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterConfirm"
+        app:layout_constraintEnd_toEndOf="@+id/RegisterConfirm"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/RegisterConfirm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="Пароль"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RegisterConfirm"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="Подтвердите пароль"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

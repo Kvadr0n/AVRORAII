@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity3">
+
+    <ImageView
+        android:id="@+id/logo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ForgotID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/ForgotReturn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:onClick="onSwitch"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="@string/backToLogin"
+        android:textAllCaps="false"
+        android:textColor="#1B02FF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ForgotLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="216dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ForgotLogin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/ForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forgotLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="Ваш логин"
+            android:inputType="none"
+            android:rotation="0"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ForgotPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="Ваш пароль"
+            android:inputType="none"
+            android:rotation="0"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/ForgotButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F0A654"
+        android:fontFamily="sans-serif"
+        android:onClick="onGet"
+        android:text="Получить данные"
+        app:layout_constraintBottom_toTopOf="@+id/ForgotReturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="216dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ForgotID"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintBottom_toTopOf="@+id/ForgotButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forgotID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="ID пользователя"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/logo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ForgotID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TeacherActivity3"
+    android:theme="@style/MyCheckBox">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Answers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/QuestionText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#F0A654"
+            android:hint="Количество ответов"
+            android:inputType="number"
+            android:rotation="0"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/QuestionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FF0BA0DE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0A654"
+            android:hint="Текст вопроса"
+            android:inputType="textMultiLine"
+            android:rotation="0"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F0A654"
+        android:fontFamily="sans-serif"
+        android:onClick="onNext"
+        android:text="Следующий вопрос"
+        app:cornerRadius="216dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioButton
+        android:id="@+id/choiceSingle"
+        style="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:onClick="onSingle"
+        android:text="Выбор одного ответа"
+        android:textColor="#CD6C00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Answers" />
+
+    <CheckBox
+        android:id="@+id/choiceMulti"
+        style="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:onClick="onMulti"
+        android:text="Выбор нескольких ответов"
+        android:textColor="#CD6C00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceSingle" />
+
+    <EditText
+        android:id="@+id/choiceShort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="onShort"
+        android:text="Ввод краткого ответа"
+        android:textAlignment="center"
+        android:textColor="#CD6C00"
+        android:textColorHint="#CD6C00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceMulti" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
